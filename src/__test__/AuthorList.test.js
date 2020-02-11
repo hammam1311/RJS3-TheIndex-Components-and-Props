@@ -3,18 +3,18 @@ import React from "react";
 import { shallow } from "enzyme";
 
 // Component
-import AuthorsList from "../AuthorsList";
+import AuthorList from "../AuthorList";
 
 //Mocks
 import { fakeAuthor } from "../testUtils";
 
-describe("<AuthorsList />", () => {
+describe("<AuthorList />", () => {
   let wrapper;
   const authors = Array.from({ length: Math.floor(Math.random() * 20) }, () =>
     fakeAuthor()
   );
   beforeEach(() => {
-    wrapper = shallow(<AuthorsList authors={authors} />);
+    wrapper = shallow(<AuthorList authors={authors} />);
   });
 
   it("renders correctly", () => {
